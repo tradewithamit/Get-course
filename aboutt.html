@@ -1,0 +1,3994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loss Cutter</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon"
+        href="https://uxwing.com/wp-content/themes/uxwing/download/business-professional-services/candlestick-icon.png"
+        type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-attachment: fixed;
+            /* background-image: url("https://static.vecteezy.com/system/resources/previews/022/330/355/non_2x/bull-bullish-divergence-in-stock-market-and-crypto-currency-with-colorful-graph-created-generative-ai-free-photo.jpeg"); */
+
+            /* background-color: #b7a196; */
+            background-color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        /* .view {
+            width: 100%;
+           
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                scale: 0.5;
+            }
+
+            to {
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        .part1,
+        .part2,
+        .part3,
+        .part4,
+        .part5,
+        .part6,
+        .part7,
+        .part8,
+        .part9,
+        .part10,
+        .part11,
+        .part12,
+        .part13,
+        .part14 {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 35%;
+        } */
+
+
+
+
+
+        nav ul {
+            position: relative;
+            line-height: 2rem;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            /* backdrop-filter: blur(2px); */
+            /* background-color: green; */
+            background: linear-gradient(to right, purple, pink);
+            box-shadow: 0px 2px 8px black;
+        }
+
+        nav ul .active {
+            width: 3rem;
+            height: 3rem;
+            background-image: url("images/LOSS\ CUTTER.png");
+            border: 2px solid gray;
+            border-radius: 50%;
+            background-size: cover;
+        }
+
+        nav ul .active2 {
+            background-color: white;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        nav ul .active:hover {
+            border-radius: 50px;
+        }
+
+        nav ul li {
+            text-align: center;
+            width: 100px;
+            height: 2rem;
+            margin: 0.5rem;
+        }
+
+        nav ul li:hover {
+            /* background-color: #FEA700; */
+            background-color: white;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            transition: 0.2s;
+        }
+
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+
+        }
+
+        .sub {
+            display: none;
+        }
+
+        nav ul li:hover .sub {
+            width: 100%;
+            top: 3.6rem;
+            right: 0.2rem;
+            position: absolute;
+            display: block;
+            z-index: 100;
+        }
+
+        nav ul li:hover .sub ul {
+            padding-bottom: 0.6rem;
+        }
+
+        nav ul li:hover .sub ul li {
+            font-size: 13px;
+            width: 100%;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+
+        .menu-option {
+            display: none;
+        }
+
+        .btn-3d {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            box-shadow: 0 5px 0 #388E3C, 0 10px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .btn-3d a {
+            line-height: 100%;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-3d:active {
+            transform: translateY(5px);
+            box-shadow: 0 0px 0 #388E3C, 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .part1 {
+            position: relative;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            top: 4.5rem;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 38rem;
+            background-color: white;
+        }
+
+        .part1 #transform {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            padding: 4rem;
+            width: 49%;
+            height: 100%;
+            background-color: white;
+        }
+
+        .part1 #transform #text1 {
+
+            width: 100%;
+            height: 20%;
+            text-transform: capitalize;
+            font-size: 3rem;
+            /* background-color: gray; */
+        }
+
+        .part1 #transform #text1 span {
+            color: red;
+            font-size: 4rem;
+            transition: 0.1s;
+            animation: cchange 2s linear infinite;
+        }
+
+        .part1 #transform #text2 {
+            margin-top: 3rem;
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            width: 100%;
+            height: 20%;
+            /* background-color: gray; */
+        }
+
+        .part1 #transform button {
+            width: 40%;
+            height: 7.5%;
+            text-transform: capitalize;
+            background-color: #F6CB04;
+            border-radius: 6px;
+            border: none;
+            font-weight: bolder;
+            font-size: larger;
+            box-shadow: 0px 5px 10px black, 0px -5px 10px white;
+            transition: 0.2s;
+            text-decoration: none;
+
+        }
+
+        .part1 #transform button a {
+            color: black;
+            /* background-color: green; */
+            padding-left: 25%;
+            padding-right: 25%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+
+        .part1 #transform button:hover {
+            background-color: red;
+            transform: scale(1.2);
+        }
+
+        .part1 #transform #text3 {
+            text-transform: lowercase;
+            font-size: 1.5rem;
+            width: 100%;
+            height: 20%;
+        }
+
+        @keyframes cchange {
+            0% {
+                color: red;
+            }
+
+            50% {
+                color: green;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        .part1 #pic {
+            display: flex;
+            justify-content: center;
+
+            width: 49%;
+            height: 100%;
+            background-color: transparent;
+
+        }
+
+        .part1 #pic #piccover {
+
+            width: 80%;
+            height: 100%;
+            background-image: url("images/1000068510-removebg.png");
+            /* background-image: url("images/22663364\ org.png"); */
+            /* border: 2px solid black; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+        }
+
+        .part2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 2.5rem;
+            width: 100%;
+            height: 8rem;
+            background-color: white;
+            color: black;
+            text-transform: uppercase;
+            font-size: 3rem;
+        }
+
+        .part3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* top: 4rem; */
+            width: 100%;
+            height: 20rem;
+            /* background-color: red; */
+        }
+
+        .part3 #banner {
+            width: 90%;
+            height: 80%;
+            /* background-image: url("images/20240825_113744.png"); */
+            background-image: url("images/wishing\ you\ a\ bright.png");
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .part4 {
+            text-align: center;
+            line-height: 5rem;
+            width: 100%;
+            height: 5rem;
+            font-size: 4rem;
+            /* background-color: red; */
+            text-transform: uppercase;
+        }
+
+
+        .part5 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 30rem;
+            /* background-color: red; */
+            margin-bottom: 1rem;
+        }
+
+        .part5 .banner {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 22%;
+            height: 100%;
+            background: linear-gradient(to top left, pink, purple);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 12px;
+            box-shadow: 2px 2px 4px black, -2px -2px 4px gray;
+            transition: 0.1s;
+        }
+
+        .part5 .banner:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to top left, white, purple);
+        }
+
+        .part5 .banner #bannercover1 {
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+            background: url("images/1st.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .part5 .banner #bannercover2 {
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+            background: url("images/2nd.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .part5 .banner #bannercover3 {
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+            background: url("images/3rd.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .part5 .banner #bannerdata1,
+        #bannerdata2,
+        #bannerdata3 {
+            padding: 0.5rem;
+            text-transform: capitalize;
+            font-weight: bolder;
+            width: 100%;
+            height: 60%;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            /* align-items: center; */
+            flex-direction: column;
+        }
+
+        .part5 .banner #bannerdata1 #validity {
+            color: gray;
+            text-transform: capitalize;
+        }
+
+        .part5 .banner #bannerdata2 #validity {
+            color: gray;
+            text-transform: capitalize;
+        }
+
+        .part5 .banner #bannerdata3 #validity {
+            color: gray;
+            text-transform: capitalize;
+        }
+
+        .part5 .banner #bannerdata1 button {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            height: 2rem;
+            background-color: #4CAF50;
+            border: navajowhite;
+            text-transform: capitalize;
+            font-weight: bolder;
+            border-radius: 5px;
+        }
+
+        .part5 .banner #bannerdata2 button {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            height: 2rem;
+            background-color: #4CAF50;
+            border: navajowhite;
+            text-transform: capitalize;
+            font-weight: bolder;
+            border-radius: 5px;
+        }
+
+        .part5 .banner #bannerdata3 button {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            height: 2rem;
+            background-color: #4CAF50;
+            border: navajowhite;
+            text-transform: capitalize;
+            font-weight: bolder;
+            border-radius: 5px;
+        }
+
+        .part6 {
+            width: 100%;
+            height: 30rem;
+            /* background-color: green; */
+            background: url("https://static.vecteezy.com/system/resources/previews/036/048/647/non_2x/chart-stock-market-or-forex-trading-graph-in-graphic-concept-need-for-financial-investment-or-economic-trends-of-economics-element-free-vector.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+        .part6 #logo {
+            position: relative;
+            width: 10rem;
+            height: 10rem;
+            /* background-color: green; */
+            background: url("images/LOSS\ CUTTER.png");
+            background-size: cover;
+            border-radius: 50%;
+            box-shadow: -2px -2px 8px red, 2px 2px 2px green;
+
+        }
+
+        .part6 #logo:hover {
+            animation: logo 3s linear infinite;
+        }
+
+        @keyframes logo {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(90deg);
+            }
+
+            50% {
+                transform: rotate(-90deg);
+            }
+
+            75% {
+                transform: rotate(90deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .part6 p {
+            font-size: 3rem;
+            color: white;
+            font-weight: bolder;
+            margin-bottom: 1rem;
+        }
+
+        .part6 #perfect {
+            font-size: 2rem;
+            color: #F6CB04;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .part6 #future {
+            font-size: 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        .part6 #future span {
+            color: #F6CB04;
+            font-weight: bolder;
+            /* background-color: white; */
+            animation: amit 2s ease-in-out infinite;
+            transition: 0.1s;
+        }
+
+        @keyframes amit {
+            0% {
+                color: red;
+            }
+
+            50% {
+                color: green;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        .part7 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            height: 12rem;
+            /* background-color: red; */
+            margin-bottom: 1rem;
+        }
+
+        .part7 #what {
+            font-size: 3rem;
+            color: black;
+
+        }
+
+        .part7 #master {
+            font-size: 4rem;
+            color: #06B1D4;
+
+        }
+
+        .part7 #devlop {
+            padding: 0.5rem;
+            font-size: 2rem;
+            font-weight: bolder;
+            color: black;
+            background-color: #F6CB04;
+            border-radius: 8px;
+
+        }
+
+        .part8 {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 50vh;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, purple, pink);
+            border-radius: 12px;
+            box-shadow: 0px 2px 8px black, 0px -2px 8px black;
+        }
+
+        .part8 .box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            width: 15%;
+            height: 80%;
+            /* background-color: red; */
+            border-radius: 12px;
+            box-shadow: 2px 2px 8px black, -2px -2px 8px white;
+            padding: 0.8rem;
+        }
+
+        .part8 .box:hover {
+            box-shadow: 2px 2px 8px black, -2px -2px 8px white;
+            border: 1px solid black;
+        }
+
+        .part8 #box1 #logo {
+            width: 30%;
+            height: 25%;
+            background-image: url("https://framerusercontent.com/images/UyyV1gkzGukM5tWFJJKcIV22Y.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .part8 #box1 #title {
+            width: 100%;
+            height: 12%;
+            /* background-color: red; */
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .part8 #box1 #text {
+            width: 100%;
+            color: black;
+            height: 50%;
+            /* background-color: red; */
+        }
+
+        .part8 #box2 #logo {
+            width: 30%;
+            height: 25%;
+            background-image: url("https://framerusercontent.com/images/iNWOw32V2v2D5Dfm0amREl3TXms.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .part8 #box2 #title {
+            width: 100%;
+            height: 12%;
+            /* background-color: red; */
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .part8 #box2 #text {
+            width: 100%;
+            color: black;
+            height: 50%;
+            /* background-color: red; */
+        }
+
+        .part8 #box3 #logo {
+            width: 30%;
+            height: 25%;
+            background-image: url("https://framerusercontent.com/images/X0SxOlFMq4QuCk9WrFR8lZOAI.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .part8 #box3 #title {
+            width: 100%;
+            height: 12%;
+            /* background-color: red; */
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .part8 #box3 #text {
+            width: 100%;
+            color: black;
+            height: 50%;
+            /* background-color: red; */
+        }
+
+        .part8 #box4 #logo {
+            width: 30%;
+            height: 25%;
+            background-image: url("https://framerusercontent.com/images/AGMvaixsKEaB38XqJYkJzWqO0.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .part8 #box4 #title {
+            width: 100%;
+            height: 12%;
+            /* background-color: red; */
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .part8 #box4 #text {
+            width: 100%;
+            color: black;
+            height: 50%;
+            /* background-color: red; */
+        }
+
+        .part8 #box5 #logo {
+            width: 30%;
+            height: 25%;
+            background-image: url("https://framerusercontent.com/images/5Xdx1QnXmt4sA47W5VqNMv9uU8.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .part8 #box5 #title {
+            width: 100%;
+            height: 12%;
+            /* background-color: red; */
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .part8 #box5 #text {
+            width: 100%;
+            color: black;
+            height: 50%;
+            /* background-color: red; */
+        }
+
+        .part8 #box6 #logo {
+            width: 30%;
+            height: 25%;
+            background-image: url("https://framerusercontent.com/images/UyyV1gkzGukM5tWFJJKcIV22Y.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .part8 #box6 #title {
+            width: 100%;
+            height: 12%;
+            /* background-color: red; */
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .part8 #box6 #text {
+            width: 100%;
+            color: black;
+            height: 50%;
+            /* background-color: red; */
+        }
+
+        .part9 {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 40rem;
+            background: linear-gradient(to right, purple, pink);
+            /* padding: 1rem; */
+            margin-bottom: 1rem;
+        }
+
+        .part9 .pic {
+            width: 42%;
+            height: 100%;
+            background-image: url("images/aboutpic.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+
+        .part9 .about {
+            padding: 10rem;
+            width: 58.7%;
+            height: 100%;
+            /* background-color: yellow; */
+            background: linear-gradient(to right, purple, pink);
+            display: flex;
+            justify-content: start;
+            align-items: left;
+            flex-direction: column;
+        }
+
+        .part9 .about h1 {
+            font-size: 5rem;
+        }
+
+        .part9 .about #details {
+            font-size: 1.5rem;
+        }
+
+        .part10 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 10rem;
+            background-color: maroon;
+            margin-bottom: 1rem;
+        }
+
+        .part10 p {
+            font-size: 4rem;
+            font-weight: bolder;
+        }
+
+        .part10 #friends {
+            background-color: #F5CA04;
+            padding: 0.5rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .part11 {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 20rem;
+            /* background-color: red; */
+            margin-bottom: 1rem;
+        }
+
+        .part11 .box {
+            display: flex;
+            /* justify-content: space-around; */
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem;
+            transition: 0.1s;
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(to top left, pink, purple);
+            border-radius: 12px;
+            box-shadow: 2px 2px 8px black, -2px -2px 8px white;
+        }
+
+        .part11 .box:hover {
+            box-shadow: 2px 2px 8px black, -2px -2px 8px gray
+        }
+
+        .part11 .box #landn {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 20%;
+            /* background-color: red; */
+        }
+
+        .part11 .box #landn #logos1 {
+            width: 20%;
+            height: 100%;
+            /* background-color: green; */
+            background-image: url("images/283619078_427347502149299_3711910981370421819_n.jpg");
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .part11 .box #landn #name1 {
+            width: 70%;
+            height: 100%;
+            /* background-color: green; */
+            font-size: large;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+        }
+
+        .part11 .box #details1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 75%;
+            /* background-color: green; */
+        }
+
+        .part11 .box #landn #logos2 {
+            width: 20%;
+            height: 100%;
+            /* background-color: green; */
+            background-image: url("images/455048185_1178031473447942_3019508931138146435_n.jpg");
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .part11 .box #landn #name2 {
+            width: 70%;
+            height: 100%;
+            font-size: large;
+            font-weight: bolder;
+            /* background-color: green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+        }
+
+        .part11 .box #details2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 75%;
+            /* background-color: green; */
+        }
+
+        .part11 .box #landn #logos3 {
+            width: 20%;
+            height: 100%;
+            /* background-color: green; */
+            background-image: url("images/manish\ bhaiya.jpg");
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .part11 .box #landn #name3 {
+            width: 70%;
+            height: 100%;
+            font-size: large;
+            font-weight: bolder;
+            /* background-color: green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+        }
+
+        .part11 .box #details3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 75%;
+            /* background-color: green; */
+        }
+
+        .part12 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 10rem;
+            /* background-color: red; */
+            margin-bottom: 1rem;
+        }
+
+        .part12 h1 {
+            /* padding-left: 4rem;
+            padding-right: 4rem; */
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        .part12 p {
+            padding-left: 25%;
+            padding-right: 25%;
+            text-align: center;
+        }
+
+        .part13 {
+            padding: 2rem;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 30rem;
+            /* background-color: red; */
+        }
+
+        .part13 .box {
+            padding: 1rem;
+            border-radius: 12px;
+            width: 20%;
+            height: 90%;
+            /* background-color: green; */
+            box-shadow: 2px 2px 8px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            transition: 0.7s;
+        }
+
+        .part13 .box #details {
+            font-size: 1.2rem;
+        }
+
+        .part13 .box #names {
+            /* font-size: 1.2rem; */
+            font-weight: bold;
+        }
+
+
+        .part13 .box:hover {
+            /* background: linear-gradient(to top left,pink,purple); */
+            background-color: pink;
+        }
+
+        .part13 #box1 #landn #logoes {
+            width: 27%;
+            height: 100%;
+            background-image: url("https://framerusercontent.com/images/BNYJlwD1RSHHKIUi3fkXI3Wo.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+        }
+
+        .part13 #box2 #landn #logoes {
+            width: 27%;
+            height: 100%;
+            background-image: url("https://framerusercontent.com/images/ikqvuzGx5cKR3SFTvsrdWd2M0U.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+        }
+
+        .part13 #box3 #landn #logoes {
+            width: 27%;
+            height: 100%;
+            background-image: url("https://framerusercontent.com/images/Am5MxXQU49D7z7l8UYvWFGsUiM.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+        }
+
+        .part13 #box4 #landn #logoes {
+            width: 27%;
+            height: 100%;
+            background-image: url("https://framerusercontent.com/images/ifHqHiaNdemcPwsgNEOJ4qZ5peY.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+        }
+
+        .part13 .box #landn #names {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            height: 100%;
+            /* background-color: yellow; */
+            /* border-radius: 50%; */
+        }
+
+        .part13 #box1 #landn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            /* background-color: red; */
+        }
+
+        .part13 #box1 #details {
+            width: 100%;
+            height: 70%;
+            /* background-color: red; */
+        }
+
+        .part13 #box2 #landn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            /* background-color: red; */
+        }
+
+        .part13 #box2 #details {
+            width: 100%;
+            height: 70%;
+            /* background-color: red; */
+        }
+
+        .part13 #box3 #landn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            /* background-color: red; */
+        }
+
+        .part13 #box3 #details {
+            width: 100%;
+            height: 70%;
+            /* background-color: red; */
+        }
+
+        .part13 #box4 #landn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            /* background-color: red; */
+        }
+
+        .part13 #box4 #details {
+            width: 100%;
+            height: 70%;
+            /* background-color: red; */
+        }
+
+        .part14 {
+            width: 100%;
+            height: 12rem;
+            background-color: #00D3FE;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .part14 #family {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 100%;
+            /* background-color: red; */
+            font-size: 6rem;
+        }
+
+        .part14 #social {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 55%;
+            height: 100%;
+            /* background-color: red; */
+        }
+
+        .part14 #social .box {
+            width: 9.5%;
+            height: 42%;
+            /* background-color: yellow; */
+            border-radius: 50%;
+        }
+
+        .part14 #social .box img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+
+        .part14 #social .box img:hover {
+            /* transform: rotate(45deg); */
+            transform: scale(1.2);
+        }
+
+        footer {
+            padding: 3rem;
+            width: 100%;
+            height: 10rem;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+        }
+
+        footer .landn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 40%;
+            height: 100%;
+            /* background-color: red; */
+        }
+
+        footer .landn #logof {
+            width: 11.5%;
+            height: 100%;
+            background-image: url("images/LOSS\ CUTTER.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        footer p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 100%;
+            /* background-color: red; */
+            font-size: 2rem;
+            text-transform: capitalize;
+        }
+
+        footer p span {
+            /* background-color: yellow; */
+            padding: 0.3rem;
+            color: red;
+            font-size: 3rem;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (min-width:375px) and (max-width:812px) {
+            body {
+
+                width: 100%;
+                height: 100vh;
+                /* background-image: url("https://static.vecteezy.com/system/resources/previews/042/628/570/non_2x/business-idea-business-people-talking-and-calculations-about-charts-and-graphs-showing-the-growth-of-investment-results-of-successful-teamwork-free-photo.jpg"); */
+                /* background-color: #b7a196; */
+                background-color: white;
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            .disable {
+                display: none;
+            }
+
+            nav ul .active2 {
+                display: none;
+            }
+
+            .menu-option {
+                display: block;
+            }
+
+            .subhome {
+                background-color: black;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            ul li .nwhome a {
+                color: white;
+            }
+
+            .menu-option .ri-menu-3-line {
+                font-size: 1.7rem;
+                color: white;
+                margin-left: 4.5rem;
+            }
+
+            .menu-option:hover {
+                background-color: transparent;
+            }
+
+            .menu-option .sub ul li {
+                color: white;
+            }
+
+
+            nav ul {
+                position: relative;
+                line-height: 2rem;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+            nav ul li:hover {
+                /* background-color: #FEA700; */
+                background-color: black;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                transition: 0.2s;
+            }
+
+
+            .part1 {
+                position: relative;
+                padding-left: 0.2rem;
+                padding-right: 0.2rem;
+                /* top: 6.5rem; */
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 13rem;
+                background-color: white;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+            }
+
+            .part1 #transform {
+                padding: 0%;
+            }
+
+            .part1 #transform #text1 {
+                width: 100%;
+                /* height: 3rem; */
+                text-transform: capitalize;
+                font-size: 1rem;
+                /* background-color: gray; */
+            }
+
+            .part1 #transform #text1 span {
+                color: red;
+                font-size: 1.1rem;
+                transition: 0.1s;
+                animation: cchange 2s linear infinite;
+            }
+
+            .part1 #transform #text2 {
+                margin-top: 0.6rem;
+                text-transform: capitalize;
+                font-size: 0.6rem;
+                width: 100%;
+                height: 20%;
+                /* background-color: gray; */
+
+            }
+
+            .part1 #transform button {
+                position: relative;
+                left: 1rem;
+                width: 80%;
+                height: 15%;
+                text-transform: capitalize;
+                background-color: #F6CB04;
+                border-radius: 6px;
+                border: none;
+                font-weight: bolder;
+
+                box-shadow: 0px 2px 5px black, 0px -2px 5px white;
+                transition: 1s;
+            }
+
+            .part1 #transform button a {
+                color: black;
+                /* background-color: green; */
+                padding-left: 10%;
+                padding-right: 10%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+            }
+
+
+            .part1 #transform button:hover {
+                background-color: red;
+                transform: scale(1.1);
+            }
+
+
+            .part1 #transform #text3 {
+                /* text-transform: capitalize; */
+                font-size: 0.4rem;
+                width: 100%;
+                height: 20%;
+                /* background-color: green; */
+            }
+
+            .part1 #pic {
+                display: flex;
+                justify-content: center;
+
+                width: 49%;
+                height: 100%;
+                background-color: transparent;
+                overflow: hidden;
+            }
+
+            .part1 #pic #piccover {
+
+                width: 100%;
+                height: 140%;
+                /* background-image: url("images/22663364\ org.png"); */
+                background-image: url("images/1000068510-removebg.png");
+
+                /* border: 2px solid black; */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top;
+            }
+
+            .part2 {
+                width: 100%;
+                height: 2rem;
+                font-size: 1rem;
+                position: relative;
+                top: 6rem;
+            }
+
+            .part3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 6rem;
+                width: 100%;
+                height: 5rem;
+                /* background-color: red; */
+            }
+
+            .part3 #banner {
+                width: 90%;
+                height: 80%;
+
+            }
+
+            .part4 {
+                position: relative;
+                top: 5.5rem;
+                text-align: center;
+                line-height: 2rem;
+                width: 100%;
+                height: 2rem;
+                font-size: 1rem;
+                /* background-color: red; */
+                text-transform: uppercase;
+            }
+
+            .part5 {
+                /* margin-bottom: 2rem; */
+                position: relative;
+                top: 4rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 10rem;
+                background-color: white;
+            }
+
+            .part5 .banner {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                width: 27%;
+                height: 90%;
+                background-color: green;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+
+            .part5 .banner #bannercover1 {
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+                background: url("images/1st.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .part5 .banner #bannercover2 {
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+                background: url("images/2nd.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .part5 .banner #bannercover3 {
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+                background: url("images/3rd.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .part5 .banner #bannerdata1,
+            #bannerdata2,
+            #bannerdata3 {
+                padding: 0.5rem;
+                text-transform: capitalize;
+                font-weight: bolder;
+                font-size: 7px;
+                width: 100%;
+                height: 60%;
+                background-color: white;
+                display: flex;
+                justify-content: space-around;
+                /* align-items: center; */
+                flex-direction: column;
+            }
+
+            .part5 .banner #bannerdata1 #validity {
+                color: gray;
+                text-transform: capitalize;
+                font-size: 6px;
+                margin-top: 2px;
+            }
+
+            .part5 .banner #bannerdata2 #validity {
+                color: gray;
+                text-transform: capitalize;
+                font-size: 6px;
+                margin-top: 2px;
+            }
+
+            .part5 .banner #bannerdata3 #validity {
+                color: gray;
+                text-transform: capitalize;
+                font-size: 6px;
+                margin-top: 2px;
+            }
+
+            .part5 .banner #bannerdata1 button {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                height: 1rem;
+                background-color: #4CAF50;
+                border: navajowhite;
+                text-transform: capitalize;
+                font-weight: bolder;
+                border-radius: 5px;
+                font-size: 7px;
+                margin-top: 4px;
+            }
+
+            .btn-3d {
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                box-shadow: 0 5px 0 #388E3C, 0 10px 15px rgba(0, 0, 0, 0.3);
+                transition: all 0.2s ease;
+            }
+
+            .btn-3d a {
+                width: 300%;
+                line-height: 1rem;
+                margin-left: -95%;
+                margin-top: -150%;
+                display: flex;
+                position: relative;
+                margin-bottom: 10%;
+                text-decoration: none;
+                color: white;
+                font-size: 10px;
+                font-weight: bold;
+                display: inline-block;
+                /* background-color: red; */
+            }
+
+            .btn-3d:active {
+                transform: translateY(5px);
+                box-shadow: 0 0px 0 #388E3C, 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+
+
+            .part5 .banner #bannerdata2 button {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                height: 1rem;
+                background-color: #4CAF50;
+                border: navajowhite;
+                text-transform: capitalize;
+                font-weight: bolder;
+                border-radius: 5px;
+                font-size: 7px;
+                margin-top: 4px;
+            }
+
+            .part5 .banner #bannerdata3 button {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                height: 1rem;
+                background-color: #4CAF50;
+                border: navajowhite;
+                text-transform: capitalize;
+                font-weight: bolder;
+                border-radius: 5px;
+                font-size: 7px;
+                margin-top: 4px;
+            }
+
+            body nav ul .remove {
+                display: none;
+            }
+
+            .part6 {
+                width: 100%;
+                height: 15rem;
+                /* background-color: green; */
+                background: url("https://static.vecteezy.com/system/resources/previews/036/048/647/non_2x/chart-stock-market-or-forex-trading-graph-in-graphic-concept-need-for-financial-investment-or-economic-trends-of-economics-element-free-vector.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 2rem;
+            }
+
+            .part6 #logo {
+                margin-top: 2rem;
+                width: 2rem;
+                height: 2rem;
+                /* background-color: green; */
+                background: url("images/LOSS\ CUTTER.png");
+                background-size: cover;
+                border-radius: 50%;
+            }
+
+            .part6 p {
+                font-size: 1rem;
+                color: white;
+                font-weight: bolder;
+                margin-bottom: 1rem;
+            }
+
+            .part6 #perfect {
+                font-size: 0.7rem;
+                color: #F6CB04;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            .part6 #future {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                font-size: 0.5rem;
+                color: white;
+                text-align: center;
+            }
+
+            .part7 {
+                height: 6rem;
+            }
+
+            .part7 #what {
+                font-size: 1rem;
+                color: black;
+
+            }
+
+            .part7 #master {
+                font-size: 1.5rem;
+                color: #06B1D4;
+
+            }
+
+            .part7 #devlop {
+                padding: 0.5rem;
+                font-size: 0.7rem;
+                font-weight: bolder;
+                color: black;
+                background-color: #F6CB04;
+                border-radius: 8px;
+
+            }
+
+            .part8 {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 50vh;
+                margin-bottom: 1rem;
+                background: linear-gradient(to right, purple, pink);
+                border-radius: 12px;
+            }
+
+            .part8 .box {
+                width: 29%;
+                height: 42%;
+                /* background-color: red; */
+                border-radius: 12px;
+                box-shadow: 2px 2px 8px black, -2px -2px 8px white;
+            }
+
+            .part8 .box:hover {
+                box-shadow: 2px 2px 8px black, -2px -2px 8px white;
+                border: 1px solid black;
+            }
+
+            .part8 #box1 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box1 #text {
+                font-size: 0.5rem;
+            }
+
+            .part8 #box2 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box2 #text {
+                font-size: 0.5rem;
+            }
+
+            .part8 #box3 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box3 #text {
+                font-size: 0.5rem;
+            }
+
+            .part8 #box4 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box4 #text {
+                font-size: 0.5rem;
+            }
+
+            .part8 #box5 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box5 #text {
+                font-size: 0.5rem;
+            }
+
+            .part8 #box6 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box6 #text {
+                font-size: 0.5rem;
+            }
+
+            .part9 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 9.5rem;
+                background: linear-gradient(to right, purple, pink);
+                /* padding: 1rem; */
+                margin-bottom: 1rem;
+            }
+
+            .part9 #about {
+                width: 70%;
+            }
+
+            .part9 #logo {
+                width: 30%;
+            }
+
+            .part9 .about {
+                padding: 1rem;
+                width: 58.7%;
+                height: 100%;
+                /* background-color: yellow; */
+                background: linear-gradient(to right, purple, pink);
+                display: flex;
+                justify-content: start;
+                align-items: left;
+                flex-direction: column;
+            }
+
+            .part9 .about h1 {
+                font-size: 1rem;
+            }
+
+            .part9 .about #details {
+                font-size: 0.5rem;
+            }
+
+            .part10 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 8rem;
+                background-color: maroon;
+            }
+
+            .part10 p {
+                font-size: 3rem;
+                font-weight: bolder;
+            }
+
+            .part10 #friends {
+                background-color: #F5CA04;
+                padding: 0.5rem 2rem;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+
+            .part11 {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                height: 9rem;
+                /* background-color: red; */
+                margin-bottom: 1rem;
+            }
+
+            .part11 .box {
+                width: 28%;
+                height: 100%;
+                background: linear-gradient(to top left, pink, purple);
+                border-radius: 12px;
+            }
+
+            .part11 .box #landn #logos1 {
+                width: 27%;
+                height: 100%;
+                /* background-color: green; */
+                border-radius: 50%;
+            }
+
+            .part11 .box #landn #name1 {
+                width: 70%;
+                height: 100%;
+                /* background-color: green; */
+                font-size: 0.5rem;
+            }
+
+            .part11 .box #details1 {
+                width: 100%;
+                height: 75%;
+                /* background-color: green; */
+                font-size: 0.4rem;
+            }
+
+            .part11 .box #landn #logos2 {
+                width: 27%;
+                height: 100%;
+                /* background-color: green; */
+                border-radius: 50%;
+            }
+
+            .part11 .box #landn #name2 {
+                width: 70%;
+                height: 100%;
+                /* background-color: green; */
+                font-size: 0.5rem;
+            }
+
+            .part11 .box #details2 {
+                width: 100%;
+                height: 75%;
+                /* background-color: green; */
+                font-size: 0.4rem;
+            }
+
+            .part11 .box #landn #logos3 {
+                width: 27%;
+                height: 100%;
+                /* background-color: green; */
+                border-radius: 50%;
+            }
+
+            .part11 .box #landn #name3 {
+                width: 70%;
+                height: 100%;
+                /* background-color: green; */
+                font-size: 0.5rem;
+            }
+
+            .part11 .box #details3 {
+                width: 100%;
+                height: 75%;
+                /* background-color: green; */
+                font-size: 0.4rem;
+            }
+
+            .part12 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 15rem;
+                /* background-color: red; */
+                margin-bottom: 1rem;
+            }
+
+            .part12 h1 {
+                /* padding-left: 4rem;
+            padding-right: 4rem; */
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .part12 p {
+                padding-left: 4rem;
+                padding-right: 4rem;
+                text-align: center;
+            }
+
+            .part13 {
+                padding: 2rem;
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 30rem;
+                /* background-color: red; */
+            }
+
+            .part13 .box {
+                border-radius: 12px;
+                width: 48%;
+                height: 12rem;
+                /* background-color: green; */
+            }
+
+            .part13 .box #landn #names {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70%;
+                height: 100%;
+                /* background-color: yellow; */
+                /* border-radius: 50%; */
+                font-size: 0.6rem;
+                font-weight: bold;
+            }
+
+            .part13 .box #details {
+
+                font-size: 0.6rem;
+            }
+
+            .part14 {
+                width: 100%;
+                height: 5rem;
+                background-color: #00D3FE;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .part14 #family {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 100%;
+                /* background-color: red; */
+                font-size: 1.2rem;
+            }
+
+            .part14 #social {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 55%;
+                height: 100%;
+                /* background-color: red; */
+            }
+
+            .part14 #social .box {
+                width: 20%;
+                height: 52%;
+                /* background-color: yellow; */
+                border-radius: 50%;
+            }
+
+            footer {
+                padding: 3rem 0rem;
+                width: 100%;
+                height: 10rem;
+                background-color: black;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                color: white;
+            }
+
+            footer .landn {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 50%;
+                height: 100%;
+                /* background-color: red; */
+            }
+
+            footer .landn #logof {
+                width: 25%;
+                height: 70%;
+                margin-right: 0.2rem;
+                background-image: url("images/LOSS\ CUTTER.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+            }
+
+            footer p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 100%;
+                /* background-color: red; */
+                font-size: 0.5rem;
+                text-transform: capitalize;
+            }
+
+            footer p span {
+                /* background-color: yellow; */
+                padding: 0.2rem;
+                color: red;
+                font-size: 1.7rem;
+            }
+
+
+
+
+
+
+
+
+        }
+
+        @media (min-width:810px) and (max-width:1080px) {
+            body {
+
+                width: 100%;
+                height: 100vh;
+                /* background-image: url("https://static.vecteezy.com/system/resources/previews/042/628/570/non_2x/business-idea-business-people-talking-and-calculations-about-charts-and-graphs-showing-the-growth-of-investment-results-of-successful-teamwork-free-photo.jpg"); */
+                /* background-color: #b7a196; */
+                background-color: white;
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            .disable {
+                display: none;
+            }
+
+            nav ul .active2 {
+                display: none;
+            }
+
+            .menu-option {
+                display: block;
+            }
+
+            .subhome {
+                background-color: black;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            ul li .nwhome a {
+                color: white;
+            }
+
+            .menu-option .ri-menu-3-line {
+                font-size: 1.7rem;
+                color: white;
+                margin-left: 4.5rem;
+            }
+
+            .menu-option:hover {
+                background-color: transparent;
+            }
+
+            .menu-option .sub ul li {
+                color: white;
+            }
+
+
+            nav ul {
+                position: relative;
+                line-height: 2rem;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+            nav ul li:hover {
+                /* background-color: #FEA700; */
+                background-color: black;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                transition: 0.2s;
+            }
+
+            .part1 {
+                position: relative;
+                padding-left: 0.2rem;
+                padding-right: 0.2rem;
+                /* top: 6.5rem; */
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 25rem;
+                background-color: white;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+            }
+
+            .part1 #transform {
+                width: 20rem;
+                /* background-color: red; */
+                padding: 0%;
+            }
+
+            .part1 #transform #text1 {
+                width: 100%;
+                /* height: 3rem; */
+                text-transform: capitalize;
+                font-size: 3rem;
+                /* background-color: gray; */
+            }
+
+            .part1 #transform #text1 span {
+                color: red;
+                font-size: 2.5rem;
+                transition: 0.1s;
+                animation: cchange 2s linear infinite;
+            }
+
+            .part1 #transform #text2 {
+                margin-top: 3rem;
+                text-transform: capitalize;
+                font-size: 1.2rem;
+                width: 100%;
+                height: 20%;
+                /* background-color: gray; */
+            }
+
+            .part1 #transform button {
+                position: relative;
+                left: 1rem;
+                width: 80%;
+                height: 15%;
+                text-transform: capitalize;
+                background-color: #F6CB04;
+                border-radius: 6px;
+                border: none;
+                font-weight: bolder;
+                box-shadow: 0px 2px 5px black, 0px -2px 5px white;
+                transition: 1s;
+            }
+
+            .part1 #transform button a {
+                color: black;
+                /* background-color: green; */
+                padding-left: 25%;
+                padding-right: 25%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+            }
+
+            .part1 #transform button:hover {
+                background-color: red;
+                transform: scale(1.1);
+            }
+
+
+            .part1 #transform #text3 {
+                /* text-transform: capitalize; */
+                font-size: 0.8rem;
+                width: 100%;
+                height: 20%;
+                /* background-color: green; */
+            }
+
+            .part1 #pic {
+                display: flex;
+                justify-content: center;
+
+                width: 49%;
+                height: 100%;
+                background-color: transparent;
+                overflow: hidden;
+            }
+
+            .part1 #pic #piccover {
+
+                width: 100%;
+                height: 140%;
+                /* background-image: url("images/22663364\ org.png"); */
+                background-image: url("images/1000068510-removebg.png");
+                /* border: 2px solid black; */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top;
+            }
+
+            .part2 {
+                width: 100%;
+                height: 2rem;
+                font-size: 2.5rem;
+                position: relative;
+                top: 6rem;
+            }
+
+            .part3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 6rem;
+                width: 100%;
+                height: 15rem;
+                /* background-color: red; */
+            }
+
+            .part3 #banner {
+                width: 95%;
+                height: 80%;
+
+            }
+
+            .part4 {
+                position: relative;
+                top: 5.5rem;
+                text-align: center;
+                line-height: 2rem;
+                width: 100%;
+                height: 4rem;
+                font-size: 2rem;
+                /* background-color: red; */
+                text-transform: uppercase;
+            }
+
+            .part5 {
+                /* margin-bottom: 2rem; */
+                position: relative;
+                top: 4rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 20rem;
+                background-color: white;
+            }
+
+            .part5 .banner {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                width: 27%;
+                height: 90%;
+                background-color: green;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+
+            .part5 .banner #bannercover1 {
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+                background: url("images/1st.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .part5 .banner #bannercover2 {
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+                background: url("images/2nd.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .part5 .banner #bannercover3 {
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+                background: url("images/3rd.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .part5 .banner #bannerdata1,
+            #bannerdata2,
+            #bannerdata3 {
+                padding: 0.5rem;
+                text-transform: capitalize;
+                font-weight: bolder;
+                font-size: 14px;
+                width: 100%;
+                height: 60%;
+                background-color: white;
+                display: flex;
+                justify-content: space-around;
+                /* align-items: center; */
+                flex-direction: column;
+            }
+
+            .part5 .banner #bannerdata1 #validity {
+                color: gray;
+                text-transform: capitalize;
+                font-size: 12px;
+                margin-top: 2px;
+            }
+
+            .part5 .banner #bannerdata2 #validity {
+                color: gray;
+                text-transform: capitalize;
+                font-size: 12px;
+                margin-top: 2px;
+            }
+
+            .part5 .banner #bannerdata3 #validity {
+                color: gray;
+                text-transform: capitalize;
+                font-size: 12px;
+                margin-top: 2px;
+            }
+
+            .part5 .banner #bannerdata1 button {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                height: 2rem;
+                background-color: #4CAF50;
+                border: navajowhite;
+                text-transform: capitalize;
+                font-weight: bolder;
+                border-radius: 5px;
+                font-size: 7px;
+                margin-top: 4px;
+            }
+
+            .part5 .banner #bannerdata1 button a {
+                /* background-color: red; */
+                padding-left: 24%;
+                padding-right: 24%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+
+            .part5 .banner #bannerdata2 button {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                height: 2rem;
+                background-color: #4CAF50;
+                border: navajowhite;
+                text-transform: capitalize;
+                font-weight: bolder;
+                border-radius: 5px;
+                font-size: 7px;
+                margin-top: 4px;
+            }
+
+            .part5 .banner #bannerdata2 button a {
+                /* background-color: red; */
+                padding-left: 24%;
+                padding-right: 24%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+
+            .part5 .banner #bannerdata3 button {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                height: 2rem;
+                background-color: #4CAF50;
+                border: navajowhite;
+                text-transform: capitalize;
+                font-weight: bolder;
+                border-radius: 5px;
+                font-size: 7px;
+                margin-top: 4px;
+            }
+
+            .part5 .banner #bannerdata3 button a {
+                /* background-color: red; */
+                padding-left: 24%;
+                padding-right: 24%;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+            .btn-3d {
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                box-shadow: 0 5px 0 #388E3C, 0 10px 15px rgba(0, 0, 0, 0.3);
+                transition: all 0.2s ease;
+            }
+
+            .btn-3d a {
+                width: 130%;
+                height: 350%;
+                line-height: 130%;
+                margin-left: -15%;
+                margin-top: -8%;
+                display: flex;
+                position: relative;
+                margin-bottom: 10%;
+                text-decoration: none;
+                color: white;
+                font-size: 10px;
+                font-weight: bold;
+                display: inline-block;
+                /* background-color: red; */
+            }
+
+            .btn-3d:active {
+                transform: translateY(5px);
+                box-shadow: 0 0px 0 #388E3C, 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            body nav ul .remove {
+                display: none;
+            }
+
+            .part6 {
+                width: 100%;
+                height: 20rem;
+                /* background-color: green; */
+                background: url("https://static.vecteezy.com/system/resources/previews/036/048/647/non_2x/chart-stock-market-or-forex-trading-graph-in-graphic-concept-need-for-financial-investment-or-economic-trends-of-economics-element-free-vector.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 2rem;
+            }
+
+            .part6 #logo {
+                margin-top: 2rem;
+                width: 4rem;
+                height: 4rem;
+                /* background-color: green; */
+                background: url("images/LOSS\ CUTTER.png");
+                background-size: cover;
+                border-radius: 50%;
+            }
+
+            .part6 p {
+                font-size: 1.4rem;
+                color: white;
+                font-weight: bolder;
+                margin-bottom: 1rem;
+            }
+
+            .part6 #perfect {
+                font-size: 1.5rem;
+                color: #F6CB04;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            .part6 #future {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                font-size: 1rem;
+                color: white;
+                text-align: center;
+            }
+
+            .part7 {
+                height: 6rem;
+            }
+
+            .part7 #what {
+                font-size: 1.5rem;
+                color: black;
+
+            }
+
+            .part7 #master {
+                font-size: 2rem;
+                color: #06B1D4;
+
+            }
+
+            .part7 #devlop {
+                padding: 0.5rem;
+                font-size: 1rem;
+                font-weight: bolder;
+                color: black;
+                background-color: #F6CB04;
+                border-radius: 8px;
+
+            }
+
+            .part8 {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 50vh;
+                margin-bottom: 1rem;
+                background: linear-gradient(to right, purple, pink);
+                border-radius: 12px;
+            }
+
+            .part8 .box {
+                width: 29%;
+                height: 42%;
+                /* background-color: red; */
+                border-radius: 12px;
+                box-shadow: 2px 2px 8px black, -2px -2px 8px white;
+            }
+
+            .part8 .box:hover {
+                box-shadow: 2px 2px 8px black, -2px -2px 8px white;
+                border: 1px solid black;
+            }
+
+            .part8 #box1 #title {
+                font-size: 1.5rem;
+            }
+
+            .part8 #box1 #text {
+                font-size: 1rem;
+            }
+
+            .part8 #box2 #title {
+                font-size: 1.6rem;
+            }
+
+            .part8 #box2 #text {
+                font-size: 1rem;
+            }
+
+            .part8 #box3 #title {
+                font-size: 1.6rem;
+            }
+
+            .part8 #box3 #text {
+                font-size: 1rem;
+            }
+
+            .part8 #box4 #title {
+                font-size: 1.6rem;
+            }
+
+            .part8 #box4 #text {
+                font-size: 1rem;
+            }
+
+            .part8 #box5 #title {
+                font-size: 1.5rem;
+            }
+
+            .part8 #box5 #text {
+                font-size: 1rem;
+            }
+
+            .part8 #box6 #title {
+                font-size: 1.6rem;
+            }
+
+            .part8 #box6 #text {
+                font-size: 1rem;
+            }
+
+            .part9 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 20rem;
+                background: linear-gradient(to right, purple, pink);
+                /* padding: 1rem; */
+                margin-bottom: 1rem;
+            }
+
+            .part9 #about {
+                width: 70%;
+            }
+
+            .part9 #logo {
+                width: 30%;
+            }
+
+            .part9 .about {
+                padding: 1rem;
+                width: 64.7%;
+                height: 100%;
+                /* background-color: yellow; */
+                background: linear-gradient(to right, purple, pink);
+                display: flex;
+                justify-content: start;
+                align-items: left;
+                flex-direction: column;
+            }
+
+            .part9 .about h1 {
+                font-size: 3rem;
+            }
+
+            .part9 .about #details {
+                font-size: 1.2rem;
+                color: black;
+            }
+
+            .part10 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 8rem;
+                background-color: maroon;
+            }
+
+            .part10 p {
+                font-size: 3rem;
+                font-weight: bolder;
+            }
+
+            .part10 #friends {
+                background-color: #F5CA04;
+                padding: 0.5rem 2rem;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+
+            .part11 {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                height: 14rem;
+                /* background-color: red; */
+                margin-bottom: 1rem;
+            }
+
+            .part11 .box {
+                width: 30%;
+                height: 100%;
+                background: linear-gradient(to top left, pink, purple);
+                border-radius: 12px;
+            }
+
+            .part11 .box #landn #logos1 {
+                width: 30%;
+                height: 160%;
+                /* background-color: green; */
+                border-radius: 50%;
+            }
+
+            .part11 .box #landn #name1 {
+                width: 70%;
+                height: 100%;
+                /* background-color: green; */
+                font-size: 1.2rem;
+            }
+
+            .part11 .box #details1 {
+                width: 100%;
+                height: 75%;
+                /* background-color: green; */
+                font-size: 1rem;
+                /* padding-top: 0.5rem; */
+            }
+
+            .part11 .box #landn #logos2 {
+                width: 30%;
+                height: 160%;
+                /* background-color: green; */
+                border-radius: 50%;
+            }
+
+            .part11 .box #landn #name2 {
+                width: 70%;
+                height: 100%;
+                /* background-color: green; */
+                font-size: 1.2rem;
+            }
+
+            .part11 .box #details2 {
+                width: 100%;
+                height: 75%;
+                /* background-color: green; */
+                font-size: 1rem;
+            }
+
+            .part11 .box #landn #logos3 {
+                width: 30%;
+                height: 160%;
+                /* background-color: green; */
+                border-radius: 50%;
+            }
+
+            .part11 .box #landn #name3 {
+                width: 70%;
+                height: 100%;
+                /* background-color: green; */
+                font-size: 1.2rem;
+            }
+
+            .part11 .box #details3 {
+                width: 100%;
+                height: 75%;
+                /* background-color: green; */
+                font-size: 1rem;
+            }
+
+            .part12 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 15rem;
+                /* background-color: red; */
+                margin-bottom: 1rem;
+            }
+
+            .part12 h1 {
+                /* padding-left: 4rem;
+            padding-right: 4rem; */
+                font-size: 2.8rem;
+                text-align: center;
+            }
+
+            .part12 p {
+                padding-left: 4rem;
+                padding-right: 4rem;
+                text-align: center;
+                font-size: 1.4rem;
+                /* background-color: green; */
+            }
+
+            .part13 {
+                padding: 2rem;
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 30rem;
+                /* background-color: red; */
+                margin-bottom: 14rem;
+            }
+
+            .part13 .box {
+                border-radius: 12px;
+                width: 48%;
+                height: 20rem;
+                /* background-color: green; */
+                margin-bottom: 1rem;
+            }
+
+            .part13 .box #landn #names {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60%;
+                height: 100%;
+                background-color: yellow;
+                /* border-radius: 50%; */
+                border-radius: 12px;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            .part13 .box #details {
+
+                font-size: 1.2rem;
+            }
+
+            .part14 {
+                width: 100%;
+                height: 5rem;
+                background-color: #00D3FE;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .part14 #family {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 100%;
+                /* background-color: red; */
+                font-size: 1.2rem;
+            }
+
+            .part14 #social {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 55%;
+                height: 100%;
+                /* background-color: red; */
+            }
+
+            .part14 #social .box {
+                width: 15%;
+                height: 80%;
+                /* background-color: yellow; */
+                border-radius: 50%;
+            }
+
+            footer {
+                padding: 3rem 0rem;
+                width: 100%;
+                height: 10rem;
+                background-color: black;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                color: white;
+            }
+
+            footer .landn {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 50%;
+                height: 100%;
+                /* background-color: red; */
+            }
+
+            footer .landn #logof {
+                width: 15%;
+                height: 90%;
+                margin-right: 0.2rem;
+                background-image: url("images/LOSS\ CUTTER.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+            }
+
+            footer p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 100%;
+                /* background-color: red; */
+                font-size: 1rem;
+                text-transform: capitalize;
+            }
+
+            footer p span {
+                /* background-color: yellow; */
+                padding: 0.2rem;
+                color: red;
+                font-size: 1.7rem;
+            }
+
+
+
+
+
+
+
+        }
+
+        @media (min-width:340px) and (max-width:740px) {
+            body {
+
+                width: 100%;
+                height: 100vh;
+                /* background-image: url("https://static.vecteezy.com/system/resources/previews/042/628/570/non_2x/business-idea-business-people-talking-and-calculations-about-charts-and-graphs-showing-the-growth-of-investment-results-of-successful-teamwork-free-photo.jpg"); */
+                /* background-color: #b7a196; */
+                background-color: white;
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            .disable {
+                display: none;
+            }
+
+            nav ul .active2 {
+                display: none;
+            }
+
+            .menu-option {
+                display: block;
+            }
+
+            .subhome {
+                background-color: black;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            ul li .nwhome a {
+                color: white;
+            }
+
+            .menu-option .ri-menu-3-line {
+                font-size: 1.7rem;
+                color: white;
+                margin-left: 4.5rem;
+            }
+
+            .menu-option:hover {
+                background-color: transparent;
+            }
+
+            .menu-option .sub ul li {
+                color: white;
+            }
+
+
+            nav ul {
+                position: relative;
+                line-height: 2rem;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+            nav ul li:hover {
+                /* background-color: #FEA700; */
+                background-color: black;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                transition: 0.2s;
+            }
+
+            .part1 {
+                position: relative;
+                padding-left: 0.2rem;
+                padding-right: 0.2rem;
+                /* top: 6.5rem; */
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 13rem;
+                background-color: white;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+            }
+
+            .part1 #transform {
+                padding: 0%;
+            }
+
+            .part1 #transform #text1 {
+                width: 100%;
+                /* height: 3rem; */
+                text-transform: capitalize;
+                font-size: 1rem;
+                /* background-color: gray; */
+            }
+
+            .part1 #transform #text1 span {
+                color: red;
+                font-size: 1.1rem;
+                transition: 0.1s;
+                animation: cchange 2s linear infinite;
+            }
+
+            .part1 #transform #text2 {
+                margin-top: 0.6rem;
+                text-transform: capitalize;
+                font-size: 0.6rem;
+                width: 100%;
+                height: 20%;
+                /* background-color: gray; */
+            }
+
+            .part1 #transform button {
+                position: relative;
+                left: 1rem;
+                width: 80%;
+                height: 15%;
+                text-transform: capitalize;
+                background-color: #F6CB04;
+                border-radius: 6px;
+                border: none;
+                font-weight: bolder;
+                box-shadow: 0px 2px 5px black, 0px -2px 5px white;
+                transition: 1s;
+            }
+
+            .part1 #transform button a {
+                color: black;
+                /* background-color: green; */
+                padding-left: 10%;
+                padding-right: 10%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+            }
+
+            .part1 #transform button:hover {
+                background-color: red;
+                transform: scale(1.1);
+            }
+
+
+            .part1 #transform #text3 {
+                /* text-transform: capitalize; */
+                font-size: 0.4rem;
+                width: 100%;
+                height: 20%;
+                /* background-color: green; */
+            }
+
+            .part1 #pic {
+                display: flex;
+                justify-content: center;
+
+                width: 49%;
+                height: 100%;
+                background-color: transparent;
+                overflow: hidden;
+            }
+
+            .part1 #pic #piccover {
+
+                width: 100%;
+                height: 140%;
+                /* background-image: url("images/22663364\ org.png"); */
+                background-image: url("images/1000068510-removebg.png");
+
+                /* border: 2px solid black; */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top;
+            }
+
+            .part2 {
+                width: 100%;
+                height: 2rem;
+                font-size: 1rem;
+                position: relative;
+                top: 6rem;
+            }
+
+            .part3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 6rem;
+                width: 100%;
+                height: 5rem;
+                /* background-color: red; */
+            }
+
+            .part3 #banner {
+                width: 90%;
+                height: 80%;
+
+            }
+
+            .part4 {
+                position: relative;
+                top: 5.5rem;
+                text-align: center;
+                line-height: 2rem;
+                width: 100%;
+                height: 2rem;
+                font-size: 1rem;
+                /* background-color: red; */
+                text-transform: uppercase;
+            }
+
+            .part5 {
+                /* margin-bottom: 2rem; */
+                position: relative;
+                top: 4rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 10rem;
+                background-color: white;
+            }
+
+            .part5 .banner {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                width: 27%;
+                height: 90%;
+                background-color: green;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+
+            .part5 .banner #bannercover1 {
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+                background: url("images/1st.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .part5 .banner #bannercover2 {
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+                background: url("images/2nd.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .part5 .banner #bannercover3 {
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+                background: url("images/3rd.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .part5 .banner #bannerdata1,
+            #bannerdata2,
+            #bannerdata3 {
+                padding: 0.2rem;
+                text-transform: capitalize;
+                font-weight: bolder;
+                font-size: 7px;
+                width: 100%;
+                height: 60%;
+                background-color: white;
+                display: flex;
+                justify-content: space-around;
+                /* align-items: center; */
+                flex-direction: column;
+            }
+
+            .part5 .banner #bannerdata1 #validity {
+                color: gray;
+                text-transform: capitalize;
+                font-size: 6px;
+                margin-top: 2px;
+            }
+
+            .part5 .banner #bannerdata2 #validity {
+                color: gray;
+                text-transform: capitalize;
+                font-size: 6px;
+                margin-top: 2px;
+            }
+
+
+            .part5 .banner #bannerdata3 #validity {
+                color: gray;
+                text-transform: capitalize;
+                font-size: 6px;
+                margin-top: 2px;
+            }
+
+            .part5 .banner #bannerdata1 button {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                height: 1rem;
+                background-color: #4CAF50;
+                border: navajowhite;
+                text-transform: capitalize;
+                font-weight: bolder;
+                border-radius: 5px;
+                font-size: 7px;
+                margin-top: 4px;
+            }
+
+            .part5 .banner #bannerdata2 button {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                height: 1rem;
+                background-color: #4CAF50;
+                border: navajowhite;
+                text-transform: capitalize;
+                font-weight: bolder;
+                border-radius: 5px;
+                font-size: 7px;
+                margin-top: 4px;
+            }
+
+            .part5 .banner #bannerdata3 button {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                height: 1rem;
+                background-color: #4CAF50;
+                border: navajowhite;
+                text-transform: capitalize;
+                font-weight: bolder;
+                border-radius: 5px;
+                font-size: 7px;
+                margin-top: 4px;
+            }
+            .btn-3d {
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                box-shadow: 0 5px 0 #388E3C, 0 10px 15px rgba(0, 0, 0, 0.3);
+                transition: all 0.2s ease;
+            }
+
+            .btn-3d a {
+                width: 300%;
+                height: 1.2rem;
+                line-height: 1rem;
+                margin-left: -95%;
+                margin-top: -20rem;
+                display: flex;
+                position: relative;
+                margin-bottom: 10%;
+                text-decoration: none;
+                color: white;
+                font-size: 10px;
+                font-weight: bold;
+                display: inline-block;
+                /* background-color: red; */
+            }
+
+            .btn-3d:active {
+                transform: translateY(5px);
+                box-shadow: 0 0px 0 #388E3C, 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+
+            body nav ul .remove {
+                display: none;
+            }
+
+            .part6 {
+                width: 100%;
+                height: 15rem;
+                /* background-color: green; */
+                background: url("https://static.vecteezy.com/system/resources/previews/036/048/647/non_2x/chart-stock-market-or-forex-trading-graph-in-graphic-concept-need-for-financial-investment-or-economic-trends-of-economics-element-free-vector.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 2rem;
+            }
+
+            .part6 #logo {
+                margin-top: 2rem;
+                width: 2rem;
+                height: 2rem;
+                /* background-color: green; */
+                background: url("images/LOSS\ CUTTER.png");
+                background-size: cover;
+                border-radius: 50%;
+            }
+
+            .part6 p {
+                font-size: 1rem;
+                color: white;
+                font-weight: bolder;
+                margin-bottom: 1rem;
+            }
+
+            .part6 #perfect {
+                font-size: 0.7rem;
+                color: #F6CB04;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            .part6 #future {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                font-size: 0.5rem;
+                color: white;
+                text-align: center;
+            }
+
+            .part7 {
+                height: 6rem;
+            }
+
+            .part7 #what {
+                font-size: 1rem;
+                color: black;
+
+            }
+
+            .part7 #master {
+                font-size: 1.5rem;
+                color: #06B1D4;
+
+            }
+
+            .part7 #devlop {
+                padding: 0.5rem;
+                font-size: 0.7rem;
+                font-weight: bolder;
+                color: black;
+                background-color: #F6CB04;
+                border-radius: 8px;
+
+            }
+
+            .part8 {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 50vh;
+                margin-bottom: 1rem;
+                background: linear-gradient(to right, purple, pink);
+                border-radius: 12px;
+            }
+
+            .part8 .box {
+                width: 29%;
+                height: 42%;
+                /* background-color: red; */
+                border-radius: 12px;
+                box-shadow: 2px 2px 8px black, -2px -2px 8px white;
+            }
+
+            .part8 .box:hover {
+                box-shadow: 2px 2px 8px black, -2px -2px 8px white;
+                border: 1px solid black;
+            }
+
+            .part8 #box1 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box1 #text {
+                font-size: 0.5rem;
+            }
+
+            .part8 #box2 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box2 #text {
+                font-size: 0.5rem;
+            }
+
+            .part8 #box3 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box3 #text {
+                font-size: 0.5rem;
+            }
+
+            .part8 #box4 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box4 #text {
+                font-size: 0.5rem;
+            }
+
+            .part8 #box5 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box5 #text {
+                font-size: 0.5rem;
+            }
+
+            .part8 #box6 #title {
+                font-size: 0.6rem;
+            }
+
+            .part8 #box6 #text {
+                font-size: 0.5rem;
+            }
+
+            .part9 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 9.5rem;
+                background: linear-gradient(to right, purple, pink);
+                /* padding: 1rem; */
+                margin-bottom: 1rem;
+            }
+
+            .part9 #about {
+                width: 70%;
+            }
+
+            .part9 #logo {
+                width: 30%;
+            }
+
+            .part9 .about {
+                padding: 1rem;
+                width: 58.7%;
+                height: 100%;
+                /* background-color: yellow; */
+                background: linear-gradient(to right, purple, pink);
+                display: flex;
+                justify-content: start;
+                align-items: left;
+                flex-direction: column;
+            }
+
+            .part9 .about h1 {
+                font-size: 1rem;
+            }
+
+            .part9 .about #details {
+                font-size: 0.5rem;
+            }
+
+            .part10 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 8rem;
+                background-color: maroon;
+            }
+
+            .part10 p {
+                font-size: 3rem;
+                font-weight: bolder;
+            }
+
+            .part10 #friends {
+                background-color: #F5CA04;
+                padding: 0.5rem 2rem;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+
+            .part11 {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                height: 9rem;
+                /* background-color: red; */
+                margin-bottom: 1rem;
+            }
+
+            .part11 .box {
+                width: 28%;
+                height: 100%;
+                background: linear-gradient(to top left, pink, purple);
+                border-radius: 12px;
+            }
+
+            .part11 .box #landn #logos1 {
+                width: 27%;
+                height: 100%;
+                /* background-color: green; */
+                border-radius: 50%;
+            }
+
+            .part11 .box #landn #name1 {
+                width: 70%;
+                height: 100%;
+                /* background-color: green; */
+                font-size: 0.5rem;
+            }
+
+            .part11 .box #details1 {
+                width: 100%;
+                height: 75%;
+                /* background-color: green; */
+                font-size: 0.4rem;
+            }
+
+            .part11 .box #landn #logos2 {
+                width: 27%;
+                height: 100%;
+                /* background-color: green; */
+                border-radius: 50%;
+            }
+
+            .part11 .box #landn #name2 {
+                width: 70%;
+                height: 100%;
+                /* background-color: green; */
+                font-size: 0.5rem;
+            }
+
+            .part11 .box #details2 {
+                width: 100%;
+                height: 75%;
+                /* background-color: green; */
+                font-size: 0.4rem;
+            }
+
+            .part11 .box #landn #logos3 {
+                width: 27%;
+                height: 100%;
+                /* background-color: green; */
+                border-radius: 50%;
+            }
+
+            .part11 .box #landn #name3 {
+                width: 70%;
+                height: 100%;
+                /* background-color: green; */
+                font-size: 0.5rem;
+            }
+
+            .part11 .box #details3 {
+                width: 100%;
+                height: 75%;
+                /* background-color: green; */
+                font-size: 0.4rem;
+            }
+
+            .part12 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 15rem;
+                /* background-color: red; */
+                margin-bottom: 1rem;
+            }
+
+            .part12 h1 {
+                /* padding-left: 4rem;
+            padding-right: 4rem; */
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .part12 p {
+                padding-left: 4rem;
+                padding-right: 4rem;
+                text-align: center;
+            }
+
+            .part13 {
+                padding: 2rem;
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 30rem;
+                /* background-color: red; */
+            }
+
+            .part13 .box {
+                border-radius: 12px;
+                width: 48%;
+                height: 12rem;
+                /* background-color: green; */
+            }
+
+            .part13 .box #landn #names {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70%;
+                height: 100%;
+                /* background-color: yellow; */
+                /* border-radius: 50%; */
+                font-size: 0.6rem;
+                font-weight: bold;
+            }
+
+            .part13 .box #details {
+
+                font-size: 0.6rem;
+            }
+
+            .part14 {
+                width: 100%;
+                height: 5rem;
+                background-color: #00D3FE;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .part14 #family {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 100%;
+                /* background-color: red; */
+                font-size: 1.2rem;
+            }
+
+            .part14 #social {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 55%;
+                height: 100%;
+                /* background-color: red; */
+            }
+
+            .part14 #social .box {
+                width: 20%;
+                height: 52%;
+                /* background-color: yellow; */
+                border-radius: 50%;
+            }
+
+            footer {
+                padding: 3rem 0rem;
+                width: 100%;
+                height: 10rem;
+                background-color: black;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                color: white;
+            }
+
+            footer .landn {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 50%;
+                height: 100%;
+                /* background-color: red; */
+            }
+
+            footer .landn #logof {
+                width: 25%;
+                height: 70%;
+                margin-right: 0.2rem;
+                background-image: url("images/LOSS\ CUTTER.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+            }
+
+            footer p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 100%;
+                /* background-color: red; */
+                font-size: 0.5rem;
+                text-transform: capitalize;
+            }
+
+            footer p span {
+                /* background-color: yellow; */
+                padding: 0.2rem;
+                color: red;
+                font-size: 1.7rem;
+            }
+
+
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="active ">
+                <!-- logo -->
+                <a href="#"></a>
+
+            </li>
+
+            <li class="remove">
+                <a href="#"><i class="ri-home-6-line "></i><a href="index.html">home</a></a>
+
+            </li>
+            <li class="disable active2">
+                <a href="#"><i class="ri-folder-video-line"></i> courses</a>
+
+            </li>
+            <!-- <li class="disable">
+                <a href="contact.html"><i class="ri-phone-line"></i> contact</a>
+
+            </li> -->
+
+            <!-- <li class="disable">
+                <a href="#"><i class="ri-customer-service-line"></i> support</a>
+
+            </li> -->
+            <li class="menu-option">
+                <a href="#"><i class="ri-home-6-line"></i>home</a>
+                <div class="sub">
+                    <ul>
+                        <li class="nwhome"><a href="index.html"><i class="ri-home-6-line"></i> home</li></a>
+                        <li class="subhome"><i class="ri-folder-video-line"></i> courses</li>
+                        <!-- <li><i class="ri-phone-line"></i> contact</li> -->
+
+                        <!-- <li><i class="ri-customer-service-line"></i> support</li> -->
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="view">
+        <div class="part1">
+            <div id="transform">
+                <div id="text1">transform <span>your <br> trading profession</span></div>
+                <div id="text2">Master the stock market with our <b>Comprehensive Trading Course</b></div>
+                <button type="submit"><a href="index.html">get started</a></button>
+                <div id="text3">Please note that we are not registered with SEBI. If you are considering investing in
+                    financial, derivatives, index, or advisory products, we strongly recommend that you consult your
+                    financial advisor before making any investment decisions.</div>
+            </div>
+            <div id="pic">
+                <div id="piccover"></div>
+            </div>
+        </div>
+        <div class="part2">
+            <p>pro scalping masterclass</p>
+        </div>
+        <div class="part3">
+            <div id="banner"></div>
+        </div>
+        <div class="part4">our courses</div>
+        <div class="part5">
+            <div class="banner">
+                <div id="bannercover1"></div>
+                <div id="bannerdata1">
+                    <div id="name">basic of stock market <br><b>&#8377; 1,154</b></div>
+                    <div id="validity">Course Validity - 1 year Unlock the potential of option trad..</div>
+                    <button type="submit" class="btn-3d"><a href="https://rzp.io/rzp/hWNvU08Y" target="main">Buy
+                            Now</a></button>
+
+                </div>
+            </div>
+            <div class="banner">
+                <div id="bannercover2"></div>
+                <div id="bannerdata2">
+                    <div id="name">insider's mindset strategies <br><b>&#8377; 1,260</b></div>
+                    <div id="validity">
+                        Strategy Validity - 3 Months Are you tired of ineffective tr..</div>
+                    <button type="submit" class="btn-3d"><a href="https://rzp.io/rzp/hWNvU08Y" target="main">Buy
+                            Now</a></button>
+
+                </div>
+            </div>
+            <div class="banner">
+                <div id="bannercover3"></div>
+                <div id="bannerdata3">
+                    <div id="name">red to green strategies <br><b>&#8377; 1,644</b></div>
+                    <div id="validity">Course Validity - 6 month Unlock the potential </div>
+                    <button type="submit" class="btn-3d"><a href="https://rzp.io/rzp/hWNvU08Y" target="main">Buy
+                            Now</a></button>
+
+                </div>
+            </div>
+        </div>
+        <div class="part6">
+            <div id="logo"></div>
+            <p>Welcome to Loss Cutter</p>
+            <div id="perfect">Your Perfect Destination for Affordable Stock Market Education!</div>
+            <div id="future">Hello, future traders! <span>I am Amit Tiwari</span>, the face behind Loss Cutter. With a
+                passion for the Indian stock market and a mission to empower individuals, I have created a comprehensive
+                trading course suitable for both beginners and experienced traders. With over <b>1.6k subscribers</b> on
+                YouTube and a thriving <br> community of <b>2.2k followers</b> on Instagram, Loss Cutter is your trusted
+                partner in the exciting world of stock trading.</div>
+        </div>
+        <div class="part7">
+            <div id="what">What we Offer</div>
+            <div id="master">MASTER THE MARKET</div>
+            <div id="devlop">DEVELOP A WINNING TRADING PSYCHOLOGY AND MINDSET</div>
+        </div>
+        <div class="part8">
+            <div class="box" id="box1">
+                <div id="logo"></div>
+                <div id="title">Master the Basics</div>
+                <div id="text">Learn the foundational concepts of trading, including how to read stock charts,
+                    understand
+                    market trends, and evaluate company financials.</div>
+            </div>
+            <div class="box" id="box2">
+                <div id="logo"></div>
+                <div id="title">Technical Analysis</div>
+                <div id="text">Discover the power of technical analysis and how to use charts and indicators to identify
+                    trading opportunities and make informed decisions.</div>
+            </div>
+            <div class="box" id="box3">
+                <div id="logo"></div>
+                <div id="title">Risk Management</div>
+                <div id="text">
+                    Learn how to manage risk effectively, including setting stop-loss orders, diversifying your
+                    portfolio,
+                    and understanding position sizing.
+                </div>
+            </div>
+            <div class="box" id="box4">
+                <div id="logo"></div>
+                <div id="title">Trading Psychology</div>
+                <div id="text">Explore the psychological aspects of trading, including how to overcome fear and greed,
+                    maintain discipline, and stay focused on your goals.</div>
+            </div>
+            <div class="box" id="box5">
+                <div id="logo"></div>
+                <div id="title">Advanced Strategies</div>
+                <div id="text">Take your trading skill to the next level with advanced strategies like Options buying,
+                    Option selling, hedging, Stock trading, swing trading, Positional trading.</div>
+            </div>
+            <div class="box" id="box6">
+                <div id="logo"></div>
+                <div id="title">Flexible Learning</div>
+                <div id="text">We understand that everyone has different schedules and learning styles. That’s why our
+                    course is available online and can be accessed at your convenience.</div>
+            </div>
+        </div>
+        <div class="part9">
+            <div class="pic"></div>
+            <div class="about">
+                <h1>About Me</h1>
+                <div id="details">I'm <b>Amit Tiwari,</b> and I've been trading in the Indian stock market for a long
+                    time.
+                    I got into it because I love playing with numbers and wanted to understand how the stock market
+                    works.
+                    As the years went by, I learned a lot – not just from winning, but also from making mistakes.
+                    Now, I'm pretty good at this trading thing. I don't just make money for myself; I also help others
+                    figure out the tricky world of the stock market. I've learned a lot along the way, and I enjoy
+                    sharing
+                    that knowledge with others. If you want to know how to make smart moves in the stock market, I'm
+                    your
+                    guy!</div>
+            </div>
+        </div>
+        <div class="part10">
+            <p>Testimonials</p>
+            <div id="friends">How my friend helps me</div>
+        </div>
+        <div class="part11">
+            <div class="box" id="box1">
+                <div id="landn">
+                    <div id="logos1"></div>
+                    <div id="name1">abhishek tiwari</div>
+                </div>
+                <div id="details1">My friend, my guide through every storm and gale,
+                    With your support, my dreams never fail.
+                    In times of need, your kindness shines bright,
+                    A beacon of hope, lighting up the night.</div>
+            </div>
+            <div class="box" id="box2">
+                <div id="landn">
+                    <div id="logos2"></div>
+                    <div id="name2">adarsh verma</div>
+                </div>
+                <div id="details2">In every challenge, you’re my steadfast guide,
+                    Your support unwavering, always by my side.
+                    Through every storm, you’re my constant light,
+                    .</div>
+            </div>
+            <div class="box" id="box3">
+                <div id="landn">
+                    <div id="logos3"></div>
+                    <div id="name3">manish tiwari</div>
+                </div>
+                <div id="details3">Hard work beats talent when talent doesn't work hard. Dedication, perseverance, and
+                    effort are the keys to unlocking your true potential</div>
+            </div>
+        </div>
+        <div class="part12">
+            <h1>Why Choose Loss Cutter?</h1>
+            <p>At Loss Cutter, we believe that financial education should be accessible to everyone. Whether you are a
+                novice eager to learn the basics or an experienced trader aiming to refine your strategies, our courses
+                are
+                tailored just for you. Here's why Loss cutter is the right choice for your trading education:</p>
+        </div>
+        <div class="part13">
+            <div class="box" id="box1">
+                <div id="landn">
+                    <div id="logoes"></div>
+                    <div id="names">Affordable Courses</div>
+                </div>
+                <div id="details">We understand the value of your hard-earned money. That's why our courses are priced
+                    affordably, ensuring that high-quality education doesn’t burn a hole in your pocket.</div>
+            </div>
+            <div class="box" id="box2">
+                <div id="landn">
+                    <div id="logoes"></div>
+                    <div id="names">Comprehensive
+                        Curriculum</div>
+                </div>
+                <div id="details">Our courses cover everything from the fundamentals of stock market trading to advanced
+                    strategies used by successful traders. You'll gain a deep understanding of technical analysis, risk
+                    management, and trading psychology.</div>
+            </div>
+            <div class="box" id="box3">
+                <div id="landn">
+                    <div id="logoes"></div>
+                    <div id="names">Learn from a Pro</div>
+                </div>
+                <div id="details">Benefit from my years of experience and expertise in the Indian stock market. I share
+                    practical insights, real-life examples, and time-tested strategies that can help you make informed
+                    trading decisions.</div>
+            </div>
+            <div class="box" id="box4">
+                <div id="landn">
+                    <div id="logoes"></div>
+                    <div id="names">Engaging Learning
+                        Experience</div>
+                </div>
+                <div id="details">Engaging Learning
+                    Experience
+
+                    Our courses are designed to be engaging and interactive. Expect a mix of video lessons, live trading
+                    sessions, and quizzes to reinforce your learning and keep you actively engaged.</div>
+            </div>
+        </div>
+        <div class="part14">
+            <div id="family">Join our Family</div>
+            <div id="social">
+                <div class="box" id="box1"><a
+                        href="https://www.instagram.com/tiwari_amit_7050?igsh=ZnIzdTZqYjZoZHdx"><img
+                            src="https://logodix.com/logo/2209230.jpg" alt="insta"></a></div>
+                <div class="box" id="box2"><a href="https://www.linkedin.com/in/amit-tiwari-5ab48a256/"><img
+                            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-icon.svg"
+                            alt="Linkedin"></a></div>
+                <div class="box" id="box3"><a href="https://www.youtube.com/@Loss-cutterr"><img
+                            src="https://i.pinimg.com/736x/c7/69/e0/c769e04575ce07d0364ff762f044ab19.jpg" alt="yt"></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="landn">
+            <div id="logof"></div>
+            <p>Loss-cutterr</p>
+        </div>
+        <p>made with <span> &heartsuit; </span> by amit</p>
+    </footer>
+</body>
