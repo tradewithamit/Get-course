@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loss Cutter</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon"
+        href="https://uxwing.com/wp-content/themes/uxwing/download/business-professional-services/candlestick-icon.png"
+        type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-attachment: fixed;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/022/330/355/non_2x/bull-bullish-divergence-in-stock-market-and-crypto-currency-with-colorful-graph-created-generative-ai-free-photo.jpeg");
+
+
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+
+        nav ul {
+            position: fixed;
+            line-height: 2rem;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            backdrop-filter: blur(2px);
+            box-shadow: 0px 2px 8px black;
+        }
+
+        nav ul .active {
+            width: 3rem;
+            height: 3rem;
+            background-image: url("images/LOSS\ CUTTER.png");
+            border: 2px solid gray;
+            border-radius: 50%;
+            background-size: cover;
+        }
+
+        nav ul .active2 {
+            background-color: #7EC94D;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        nav ul .active:hover {
+            border-radius: 50px;
+        }
+
+        nav ul li {
+            text-align: center;
+            width: 100px;
+            height: 2rem;
+            margin: 0.5rem;
+        }
+
+        nav ul li:hover {
+            /* background-color: #FEA700; */
+            background-color: #7EC94D;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            transition: 0.2s;
+        }
+
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .sub {
+            display: none;
+        }
+
+        nav ul li:hover .sub {
+            width: 100%;
+            top: 3.6rem;
+            right: 0.2rem;
+            position: absolute;
+            display: block;
+            z-index: 100;
+        }
+
+        nav ul li:hover .sub ul {
+            padding-bottom: 0.6rem;
+        }
+
+        nav ul li:hover .sub ul li {
+            font-size: 13px;
+            width: 100%;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+
+        .menu-option {
+            display: none;
+        }
+
+        form {
+            position: relative;
+            top: 30%;
+            left: 15%;
+        }
+
+        .login {
+            position: relative;
+            /* top: 30%;
+            left: 15%; */
+            width: 20%;
+            height: 55%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            backdrop-filter: blur(6px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px black, -4px -4px 10px rgb(98, 98, 98);
+        }
+
+        .login:hover {
+            box-shadow: 4px 4px 20px black, -4px -4px 20px white;
+        }
+
+        .login .p1 {
+            font-size: xx-large;
+            margin-bottom: 10%;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .login .inp1 {
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            margin-left: 15%;
+            margin-bottom: 5%;
+        }
+
+        .login .inp1 input {
+            /* width: 15rem; */
+            width: 80%;
+            /* height: 2rem; */
+            height: 75%;
+            padding-left: 10%;
+            margin-bottom: 10%;
+            border-radius: 80px;
+            border: 1px solid white;
+            background-color: white;
+            box-shadow: inset 0px 5px 5px black, 8px 8px 10px black, -4px -4px 10px white;
+            outline: none;
+
+        }
+
+        .login .inp1 .inp1-logo {
+            position: relative;
+            left: 1.5rem;
+            top: 0.5rem;
+        }
+
+        button {
+
+            position: relative;
+            left: 0.5rem;
+            width: 15rem;
+            height: 2rem;
+            margin-bottom: 10%;
+            text-transform: uppercase;
+            color: white;
+            background-color: black;
+            border: none;
+            border-radius: 8px;
+            transition: 0.2s;
+
+        }
+
+        button::after {
+            translate: -50% -50%;
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            content: "";
+            padding: 1%;
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to top left, red, #FDC0A3);
+            z-index: -1;
+        }
+
+        button:hover {
+            background-image: linear-gradient(to top left, red, #FDC0A3);
+            box-shadow: 4px 4px 100px pink, -4px -4px 100px purple;
+        }
+
+
+
+        .login .p2 {
+            margin-bottom: 10%;
+            color: grey;
+        }
+
+        .login .social {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            width: 80%;
+            height: 2rem;
+            margin-bottom: 10%;
+            left: 0.5rem;
+        }
+
+        .login .social .google {
+            align-items: center;
+            display: flex;
+            width: 49%;
+            height: 100%;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 7px;
+            cursor: not-allowed;
+
+        }
+
+        .login .social .google .google-logo {
+            background-image: url("https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png");
+            background-size: cover;
+            width: 20%;
+            height: 80%;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+
+        }
+
+        .login .social .google .google-name {
+            color: black;
+        }
+
+        .login .social .facebook {
+            align-items: center;
+            display: flex;
+            width: 49%;
+            height: 90%;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 7px;
+            cursor: not-allowed;
+
+        }
+
+        .login .social .facebook .facebook-logo {
+            background-image: url("https://banner2.cleanpng.com/20180802/gsi/227cad369999650c9816721b1a22c959.webp");
+            background-size: cover;
+            width: 20%;
+            height: 80%;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .login .social .facebook .facebook-name {
+            color: blue;
+        }
+
+        .login .p2 {
+            text-transform: capitalize;
+            color: #dbfcff;
+        }
+
+        .login .p3 {
+            color: #dbfcff;
+            text-transform: capitalize;
+        }
+
+        .login .p3 span {
+            text-decoration: underline;
+        }
+
+        .login button a {
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+
+
+
+
+        @media (min-width:375px) and (max-width:812px) {
+            body {
+
+                width: 100%;
+                height: 100vh;
+                background-image: url("https://static.vecteezy.com/system/resources/previews/042/628/570/non_2x/business-idea-business-people-talking-and-calculations-about-charts-and-graphs-showing-the-growth-of-investment-results-of-successful-teamwork-free-photo.jpg");
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            .disable {
+                display: none;
+            }
+
+            nav ul .active2 {
+                display: none;
+            }
+
+            .menu-option {
+                display: block;
+            }
+
+            .subhome {
+                background-color: green;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+
+            .menu-option .ri-menu-3-line {
+                font-size: 1.7rem;
+            }
+
+            .menu-option:hover {
+                background-color: transparent;
+            }
+
+            .menu-option .sub ul li {
+                color: white;
+            }
+
+
+            nav ul {
+                position: fixed;
+                line-height: 2rem;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+            form {
+                position: relative;
+                top: 15%;
+                left: 0%;
+            }
+
+            .login {
+                position: relative;
+                /* left: 7%;
+                top: 15%; */
+                width: 85%;
+                height: 52%;
+                border: 1px solid white;
+                backdrop-filter: blur(5px);
+            }
+
+            .login .social {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                width: 80%;
+                height: 3rem;
+                margin-bottom: 10%;
+                left: 0.5rem;
+            }
+
+            .login .social .google {
+                align-items: center;
+                display: flex;
+                width: 49%;
+                height: 100%;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 7px;
+                cursor: not-allowed;
+
+            }
+
+            .login .social .google .google-logo {
+                background-image: url("https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png");
+                background-size: cover;
+                width: 20%;
+                height: 55%;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+
+            }
+
+            .login .social .google .google-name {
+                color: black;
+            }
+
+            .login .social .facebook {
+                align-items: center;
+                display: flex;
+                width: 49%;
+                height: 90%;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 7px;
+                cursor: not-allowed;
+
+            }
+
+            .login .social .facebook .facebook-logo {
+                background-image: url("https://banner2.cleanpng.com/20180802/gsi/227cad369999650c9816721b1a22c959.webp");
+                background-size: cover;
+                width: 20%;
+                height: 55%;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+
+            .login .social .facebook .facebook-name {
+                color: blue;
+            }
+
+            .login .p2 {
+                text-transform: capitalize;
+
+            }
+
+            .login .p3 {
+
+                text-transform: capitalize;
+            }
+
+            .login .p3 span {
+                text-decoration: underline;
+            }
+
+        }
+
+        @media (min-width:340px) and (max-width:740px) {
+            body {
+
+                width: 100%;
+                height: 100vh;
+                background-image: url("https://static.vecteezy.com/system/resources/previews/042/628/570/non_2x/business-idea-business-people-talking-and-calculations-about-charts-and-graphs-showing-the-growth-of-investment-results-of-successful-teamwork-free-photo.jpg");
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            .disable {
+                display: none;
+            }
+
+            nav ul .active2 {
+                display: none;
+            }
+
+            .menu-option {
+                display: block;
+            }
+
+            .subhome {
+                background-color: green;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+
+            .menu-option .ri-menu-3-line {
+                font-size: 1.7rem;
+            }
+
+            .menu-option:hover {
+                background-color: transparent;
+            }
+
+            .menu-option .sub ul li {
+                color: white;
+            }
+
+
+            nav ul {
+                position: fixed;
+                line-height: 2rem;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+            form {
+                position: relative;
+                top: 15%;
+                left: 0%;
+            }
+
+            .login {
+                position: relative;
+                left: 7%;
+                top: 15%;
+                width: 85%;
+                height: 52%;
+                border: 1px solid white;
+                backdrop-filter: blur(5px);
+            }
+
+            .login .social {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                width: 80%;
+                height: 3rem;
+                margin-bottom: 10%;
+                left: 0.5rem;
+            }
+
+            .login .social .google {
+                align-items: center;
+                display: flex;
+                width: 49%;
+                height: 100%;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 7px;
+                cursor: not-allowed;
+
+            }
+
+            .login .social .google .google-logo {
+                background-image: url("https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png");
+                background-size: cover;
+                width: 20%;
+                height: 55%;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+
+            }
+
+            .login .social .google .google-name {
+                color: black;
+            }
+
+            .login .social .facebook {
+                align-items: center;
+                display: flex;
+                width: 49%;
+                height: 90%;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 7px;
+                cursor: not-allowed;
+
+            }
+
+            .login .social .facebook .facebook-logo {
+                background-image: url("https://banner2.cleanpng.com/20180802/gsi/227cad369999650c9816721b1a22c959.webp");
+                background-size: cover;
+                width: 20%;
+                height: 55%;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+
+            .login .social .facebook .facebook-name {
+                color: blue;
+            }
+
+            .login .p2 {
+                text-transform: capitalize;
+
+            }
+
+            .login .p3 {
+
+                text-transform: capitalize;
+            }
+
+            .login .p3 span {
+                text-decoration: underline;
+            }
+
+        }
+
+        @media (min-width:810px) and (max-width:1080px) {
+            body {
+
+                width: 100%;
+                height: 100vh;
+                background-image: url("https://static.vecteezy.com/system/resources/previews/042/628/570/non_2x/business-idea-business-people-talking-and-calculations-about-charts-and-graphs-showing-the-growth-of-investment-results-of-successful-teamwork-free-photo.jpg");
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            .disable {
+                display: none;
+            }
+
+            nav ul .active2 {
+                display: none;
+            }
+
+            .menu-option {
+                display: block;
+            }
+
+            .subhome {
+                background-color: green;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+
+            .menu-option .ri-menu-3-line {
+                font-size: 1.7rem;
+            }
+
+            .menu-option:hover {
+                background-color: transparent;
+            }
+
+            .menu-option .sub ul li {
+                color: white;
+            }
+
+
+            nav ul {
+                position: fixed;
+                line-height: 2rem;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+            form {
+                position: relative;
+                top: 15%;
+                /* left: 4%; */
+            }
+
+            .login {
+                position: relative;
+                left: 8%;
+                /* top: 15%; */
+                width: 85%;
+                height: 80%;
+                border: 1px solid white;
+                backdrop-filter: blur(5px);
+            }
+
+            .login .social {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                width: 80%;
+                height: 3rem;
+                margin-bottom: 10%;
+                left: 0.5rem;
+            }
+
+            .login .social .google {
+                align-items: center;
+                display: flex;
+                width: 49%;
+                height: 120%;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 7px;
+                cursor: not-allowed;
+
+            }
+
+            .login .social .google .google-logo {
+                background-image: url("https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png");
+                background-size: cover;
+                width: 20%;
+                height: 100%;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+
+            }
+
+            .login .social .google .google-name {
+                color: blue;
+            }
+
+            .login .social .facebook {
+                align-items: center;
+                display: flex;
+                width: 49%;
+                height: 120%;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 7px;
+                cursor: not-allowed;
+
+            }
+
+            .login .social .facebook .facebook-logo {
+                background-image: url("https://banner2.cleanpng.com/20180802/gsi/227cad369999650c9816721b1a22c959.webp");
+                background-size: cover;
+                width: 22%;
+                height: 100%;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+
+            .login .social .facebook .facebook-name {
+                color: blue;
+            }
+
+            .login .p2 {
+                text-transform: capitalize;
+                /* color: red; */
+
+            }
+
+            .login .p3 {
+
+                text-transform: capitalize;
+            }
+
+            .login .p3 span {
+                text-decoration: underline;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="active ">
+                <!-- logo -->
+                <a href="#"></a>
+
+            </li>
+
+            <li class="active2">
+                <a href="#"><i class="ri-home-6-line"></i> home</a>
+
+            </li>
+            <li class="disable ">
+                <a href="aboutt.html"><i class="ri-folder-video-line"> courses</i></a>
+
+            </li>
+
+
+
+            <li class="menu-option">
+                <a href="#"><i class="ri-folder-video-line"></i>courses</a>
+                <div class="sub">
+                    <ul>
+                        <li class="subhome"><i class="ri-home-6-line"></i> home</li>
+                        <li><i class="ri-folder-video-line"></i> <a href="aboutt.html"> courses</a></li>
+                        <!-- <li><i class="ri-phone-line"></i> contact</li> -->
+                        <!-- <li><i class="ri-video-line"></i> courses</li> -->
+                        <!-- <li><i class="ri-customer-service-line"></i> support</li> -->
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <form method="post" name="google-sheet">
+        <div class="login">
+            <p class="p1">welcome</p>
+            <div class="inp1">
+                <div class="inp1-logo"><i class="ri-user-line"></i></div>
+                <input type="email" placeholder="email123@gmail.com" name="email" required>
+            </div>
+            <div class="inp1">
+                <div class="inp1-logo"><i class="ri-lock-line"></i></div>
+                <input type="password" placeholder="********" name="password" required>
+            </div>
+            <button type="submit" name="submit">log in</button>
+            <p class="p2">or login with</p>
+            <div class="social">
+                <div class="google">
+                    <div class="google-logo"></div>
+                    <div class="google-name">Google</div>
+                </div>
+                <div class="facebook">
+                    <div class="facebook-logo"></div>
+                    <div class="facebook-name">Facebook</div>
+                </div>
+            </div>
+            <p class="p3">not a member&#63 <span>sign up now</span></p>
+        </div>
+    </form>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzHF2AznttI6g_UqklgDoWoEW2r-J_NWfB9u-Bcm8JEX6jxsxyLJzr0qH_1fyWA8AcY/exec';
+        const form = document.forms['google-sheet'];
+        const redirectURL = 'aboutt.html'; // Change this to your redirect URL
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    alert("verification successful .");
+                    window.location.href = redirectURL;
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+
+</body>
+
+</html>
